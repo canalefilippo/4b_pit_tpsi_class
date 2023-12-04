@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Email Validation</title>
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <center>
+        <h1>
+            Filippo Canale
+        </h1>
+        <h2>
+            Video Editor - Drone Operator - Filmmaker
+        </h2>
+    <br>
+    <br>
+    <div id="form">
+        <form id="emailForm">
+            <br>
+            <h3>Contact me</h3>
+            <br>
+            <br><br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+            <br>
+            <br>
+            <label for="email">Email:</label>
+            <input type="text" id="email" name="email">
+            <span id="emailError" class="error"></span>
+            <br>
+            <br>
+            <label for="message">Message:</label>
+            <input type="text" id="message" name="message">
+            <br>
+            <br>
+            <input type="submit" value="Submit">
+            <br><br><br>
+            <br>
+          </form>
+    </div>
+    <br>
+            <br><br>
+            <br><br>
+            <br><br>
+            <br><br><br>
+    <a id="back" href="index.html">Back</a>
+    </center>
+
+  <script>
+    document.getElementById('emailForm').addEventListener('submit', function(event) {
+      var emailInput = document.getElementById('email');
+      var emailError = document.getElementById('emailError');
+      var emailValue = emailInput.value.trim();
+
+      // Verifica se l'email contiene la chiocciola '@'
+      if (!emailValue.includes('@')) {
+        emailError.textContent = 'L\'indirizzo email deve contenere la chiocciola (@).';
+        event.preventDefault(); // Impedisce l'invio del modulo se la validazione fallisce
+      } else {
+        emailError.textContent = ''; // Pulisce il messaggio di errore se l'input è corretto
+      }
+    });
+  </script>
+
+</body>
+</html>

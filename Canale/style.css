@@ -1,0 +1,54 @@
+body
+{
+    font-family: 'Playfair Display', serif;
+    background-color: rgb(236, 236, 236);
+}
+
+
+.container
+{
+    display: flex;
+}
+.colonna
+{
+    display: block;
+    padding: 50px;
+}
+
+img
+{
+    border-radius: 50%;
+    height: 200px;
+    border: 3px solid white;
+}
+
+a{
+    display:inline-flex;
+    font-weight: bold;
+    font-size: 50px;
+    padding-left: 100px;
+    padding-bottom: 200px;
+    vertical-align: middle;
+}
+
+.error {
+      color: red;
+      font-weight: bold;
+}
+
+#form
+{
+    background-color: white;
+    border: 0.5px solid white;
+    border-radius: 25px;
+    margin-left: 450px;
+    margin-right: 450px;
+    border-top: 25px;
+    border-bottom: 25px;
+}
+
+#back
+{
+    font-size: large;
+    padding-left: 0px;
+}
